@@ -42,7 +42,7 @@
 (yas/load-directory (concat dotfiles-dir "vendor/yasnippet/snippets"))
 
 ;; Color Themes
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
+(add-to-list 'load-path (concat dotfiles-dir "vendor/color-theme"))
 (require 'color-theme)
 (color-theme-initialize)
 
@@ -63,6 +63,9 @@
 ;; Ruby hooks
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 (add-hook 'ruby-mode-hook 'whitespace-mode)
+
+;; Cucumber mode
+(load "vendor/cucumber-mode")
 
 ;; Full screen toggle
 (defun toggle-fullscreen ()
