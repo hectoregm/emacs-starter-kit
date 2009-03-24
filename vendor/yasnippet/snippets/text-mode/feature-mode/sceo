@@ -1,0 +1,7 @@
+#name: Scenario Outline: Name
+# --
+Scenario Outline: ${1:Name}
+  $0
+
+  Examples:
+    | ${2:placeholder} |

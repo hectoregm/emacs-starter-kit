@@ -1,0 +1,3 @@
+#name : it_should_behave_like ...
+# --
+it_should_behave_like "${1:behavior}"$0

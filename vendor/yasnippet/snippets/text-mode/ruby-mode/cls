@@ -6,7 +6,6 @@ class ${1:$
                                  (file-name-sans-extension
                                    (buffer-file-name))))))
            (cond
-             ((string-match "_" fn) (replace-match "" nil nil fn))
-              (t fn)))}
+             (t (string-search-and-replace "_" "" fn))))}
   $0
 end

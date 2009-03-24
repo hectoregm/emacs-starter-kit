@@ -1,0 +1,4 @@
+#name : should redirect_to 
+# --
+should redirect_to(${1:url_for})
+$0

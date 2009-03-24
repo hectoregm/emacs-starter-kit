@@ -5,7 +5,7 @@
   ;; If there is more than one, they won't work right.
  '(ecb-auto-activate nil)
  '(ecb-kill-buffer-clears-history (quote auto))
- '(ecb-layout-window-sizes (quote (("left8" (0.1773049645390071 . 0.30434782608695654) (0.1773049645390071 . 0.21739130434782608) (0.1773049645390071 . 0.2826086956521739) (0.1773049645390071 . 0.17391304347826086)))))
+ '(ecb-layout-window-sizes (quote (("left8" (0.1794871794871795 . 0.3) (0.1794871794871795 . 0.2) (0.1794871794871795 . 0.22) (0.1794871794871795 . 0.26)))))
  '(ecb-major-modes-show-or-hide (quote ((ruby-mode csharp-mode))))
  '(ecb-options-version "2.32")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))

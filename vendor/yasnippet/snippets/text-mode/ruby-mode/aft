@@ -1,0 +1,5 @@
+#name : after(:each) do ... end
+# --
+after(${1::each}) do
+  $0
+end

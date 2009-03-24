@@ -1,0 +1,4 @@
+#name : should set_the_flash
+# --
+should set_the_flash(:to => /${1:message}/)
+$0

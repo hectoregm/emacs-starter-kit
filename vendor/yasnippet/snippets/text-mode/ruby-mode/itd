@@ -1,0 +1,5 @@
+#name : it do ... end
+# --
+it do
+  ${1:object}.should ${2:value}
+end
