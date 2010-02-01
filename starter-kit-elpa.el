@@ -5,29 +5,8 @@
 (defvar starter-kit-packages (list 'idle-highlight
                                    'ruby-mode
                                    'inf-ruby
-                                   'js2-mode
                                    'css-mode
-                                   'nxml
-                                   'gist
-                                   'rinari
-                               ;; To submit
-;;;                                "magit"
-;;;                                "paredit"
-;;;                                "clojure-mode"
-;;;                                "yaml"
-;;;                                "haml"
-;;;                                "sass"
-;;;                                "cheat"
-;;;                                "html-fontify"
-;;;                                "color-theme"
-;;;                                "color-theme-zenburn"
-;;;                                "color-theme-vivid-chalk"
-                               ;; Complicated ones
-;;;                                "nxhtml"
-;;;                                "jabber"
-;;;                                "slime"
-;;;                                "swank-clojure"
-                                   )
+                                   'gist)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
@@ -54,12 +33,12 @@ just have to assume it's online."
     t))
 
 ;; On your first run, this should pull in all the base packages.
-(when (esk-online?) (ignore-errors (with-timeout (15)
-                                     (starter-kit-elpa-install))))
+(when (esk-online?)
+  (unless package-archive-contents (package-refresh-contents))
+  (starter-kit-elpa-install))
 
-(unless (functionp 'idle-highlight)
-  ;; TODO: Quick workaround for a problem folks are reporting until I
-  ;; get a chance to investigate further.
-  (defun idle-highlight () (interactive)))
+;; Workaround for an ELPA bug that people are reporting but I've been
+;; unable to reproduce:
+(autoload 'paredit-mode "paredit")
 
 (provide 'starter-kit-elpa)

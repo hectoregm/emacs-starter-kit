@@ -60,7 +60,7 @@
 (require 'line-num)
 
 ;;; cedet Configuration
-(load "/usr/share/emacs/site-lisp/cedet/common/cedet" nil t)
+(load "/usr/share/emacs/site-lisp/cedet-common/cedet" nil t)
 
 ;;; jde site-lisp configuration
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/jde/lisp")
