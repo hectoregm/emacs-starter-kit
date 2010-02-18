@@ -6,7 +6,12 @@
                                    'ruby-mode
                                    'inf-ruby
                                    'css-mode
-                                   'gist)
+                                   'gist
+                                   'rinari
+                                   'haml-mode
+                                   'sass-mode
+                                   'yaml-mode
+                                   'magit)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
