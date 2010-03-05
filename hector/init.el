@@ -60,19 +60,25 @@
 (require 'line-num)
 
 ;;; cedet Configuration
-(load "/usr/share/emacs/site-lisp/cedet-common/cedet" nil t)
+(load "vendor/cedet/common/cedet.el")
 
 ;;; jde site-lisp configuration
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/jde/lisp")
 (require 'jde-autoload)
 
 ;;; ECB Configuration 
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
+(add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
 (require 'ecb)
 
 ;; Ruby hooks
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 (add-hook 'ruby-mode-hook 'whitespace-mode)
+
+;; rhtml-mode
+(add-to-list 'load-path (concat dotfiles-dir "vendor/rhtml"))
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook
+          (lambda () (rinari-launch)))
 
 ;; Cucumber mode
 (load "vendor/cucumber-mode")
