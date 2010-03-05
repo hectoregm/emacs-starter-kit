@@ -93,6 +93,8 @@
   (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
                                            nil
                                          'fullboth)))
+;; Rinari
+(setq rinari-tags-file-name "TAGS")
 
 ;; Keyboard Overrides
 (global-set-key (kbd "C-q") nil)
