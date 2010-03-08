@@ -81,7 +81,9 @@
           (lambda () (rinari-launch)))
 
 ;; Cucumber mode
-(load "vendor/cucumber-mode")
+(add-to-list 'load-path (concat dotfiles-dir "vendor/feature-mode"))
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 
 ;;; C# mode configuration
 (autoload 'csharp-mode "csharp-mode" "Major mode for editing C# code." t)
