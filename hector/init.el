@@ -1,7 +1,7 @@
 ;; Initial configuration for hector
 
 ;; Name and email for Changelogs
-(setq user-mail-address "hectorgm@ciencias.unam.mx")
+(setq user-mail-address "hector@hectoregm.com")
 (setq user-full-name "Hector E. Gomez Morales")
 
 (add-to-list 'load-path (concat dotfiles-dir "vendor"))
@@ -61,10 +61,6 @@
 
 ;;; cedet Configuration
 (load "vendor/cedet/common/cedet.el")
-
-;;; jde site-lisp configuration
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/jde/lisp")
-(require 'jde-autoload)
 
 ;;; ECB Configuration
 (add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
