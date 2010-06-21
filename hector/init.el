@@ -27,11 +27,11 @@
 (defun string-search-and-replace (search replace string)
   "Replace all instances of SEARCH with REPLACE in STRING."
   (let ((quoted-search (regexp-quote search))
-	(start 0))
+        (start 0))
     (while (string-match quoted-search string start)
       (setq string (replace-match replace nil t string))
       (setq start (+ (match-end 0) (- (length replace)
-				      (length search)))))
+                                      (length search)))))
     string))
 
 ;; C Configuration
@@ -41,7 +41,7 @@
             (setq c-basic-offset 8)))
 
 ;; CSS Configuration
-(setq cssm-indent-level 4)
+(setq cssm-indent-level 2)
 (setq cssm-newline-before-closing-bracket t)
 (setq cssm-indent-function #'cssm-c-style-indenter)
 
@@ -66,13 +66,29 @@
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/jde/lisp")
 (require 'jde-autoload)
 
-;;; ECB Configuration 
+;;; ECB Configuration
 (add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
 (require 'ecb)
 
 ;; Ruby hooks
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 (add-hook 'ruby-mode-hook 'whitespace-mode)
+
+;; Auto complete
+(add-to-list 'load-path (concat dotfiles-dir "vendor/auto-complete-1.2"))
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; Rsense
+;; (setq rsense-home "/home/hector/opt/rsense-0.2")
+;; (add-to-list 'load-path (concat rsense-home "/etc"))
+;; (require 'rsense)
+
+;; (add-hook 'ruby-mode-hook
+;;         (lambda ()
+;;                 (add-to-list 'ac-sources 'ac-source-rsense-method)
+;;                 (add-to-list 'ac-sources 'ac-source-rsense-constant)))
+
 
 ;; rhtml-mode
 (add-to-list 'load-path (concat dotfiles-dir "vendor/rhtml"))
