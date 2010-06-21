@@ -1,0 +1,5 @@
+#name : class << self ... end
+# --
+function($1) {
+  $0$>
+}$>
