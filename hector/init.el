@@ -59,10 +59,10 @@
 ;; Line Numbers
 (require 'line-num)
 
-;;; cedet Configuration
+;; cedet Configuration
 (load "vendor/cedet/common/cedet.el")
 
-;;; ECB Configuration
+;; ECB Configuration
 (add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
 (require 'ecb)
 
@@ -85,6 +85,11 @@
 ;;                 (add-to-list 'ac-sources 'ac-source-rsense-method)
 ;;                 (add-to-list 'ac-sources 'ac-source-rsense-constant)))
 
+;; Espresso hooks
+(add-hook 'espresso-mode-hook 'whitespace-mode)
+
+;; Javascript Mode
+(setq javascript-indent-level 2)
 
 ;; rhtml-mode
 (add-to-list 'load-path (concat dotfiles-dir "vendor/rhtml"))

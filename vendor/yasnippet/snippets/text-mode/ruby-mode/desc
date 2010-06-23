@@ -1,6 +1,6 @@
 #name : describe (Controller)
 # --
-File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'spec_helper'
 
 describe ${1:$
          (let ((fn (capitalize (file-name-nondirectory
@@ -8,7 +8,7 @@ describe ${1:$
                                    (buffer-file-name))))))
            (cond
              ((setq fn (string-search-and-replace "_" "" fn))
-              (string-search-and-replace "Spec" "" fn))))}
+              (string-search-and-replace "Spec" "" fn))))} do
 
   $0
 
