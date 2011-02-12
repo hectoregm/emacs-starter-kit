@@ -1,4 +1,0 @@
-#name : should_not redirect_to 
-# --
-should_not redirect_to(${1:url_for})
-$0

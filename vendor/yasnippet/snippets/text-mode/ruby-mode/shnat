@@ -1,4 +1,0 @@
-#name : should_not assign_to
-# --
-should_not assign_to(:${1:var}, :with => ${2:object})
-$0

@@ -1,4 +1,0 @@
-#name : should_not set_the_flash
-# --
-should_not set_the_flash(:to => /${1:message}/)
-$0

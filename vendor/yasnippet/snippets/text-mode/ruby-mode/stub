@@ -1,3 +1,0 @@
-#name : stub!(...)
-# --
-${1:var}.stub!(:${2:message})$0

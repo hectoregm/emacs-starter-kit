@@ -1,4 +1,0 @@
-#name : should_not render_template
-# --
-should_not render_template(:${1:template})
-$0

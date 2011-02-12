@@ -1,4 +1,0 @@
-#name : should assign_to
-# --
-should assign_to(:${1:var}, :with => ${2:object})
-$0

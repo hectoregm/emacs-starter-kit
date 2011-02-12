@@ -1,9 +1,0 @@
-#name: public type setVariable () { }
-# --
-/**
- * Description here
- * @param $2
- */
-public void set${1:Variable}(${2:param}) {
-        $0
-}
