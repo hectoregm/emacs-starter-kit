@@ -8,12 +8,13 @@
                                    'ruby-mode
                                    'inf-ruby
                                    'css-mode
-                                   'gist
                                    'rinari
                                    'haml-mode
                                    'sass-mode
                                    'yaml-mode
-                                   'magit)
+                                   'find-file-in-project
+                                   'magit
+                                   'gist)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
