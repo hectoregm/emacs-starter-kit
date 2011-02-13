@@ -21,6 +21,7 @@
 (require 'hector/rails)
 (require 'hector/js)
 (require 'hector/keyboard)
+(require 'hector/twitter)
 
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))

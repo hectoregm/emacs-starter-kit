@@ -12,6 +12,7 @@
                                    'haml-mode
                                    'sass-mode
                                    'yaml-mode
+                                   'rvm
                                    'find-file-in-project
                                    'magit
                                    'gist)
