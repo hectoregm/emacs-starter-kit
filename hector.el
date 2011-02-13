@@ -16,16 +16,7 @@
 (require 'hector/css)
 (require 'hector/c-lang)
 (require 'hector/csharp)
-
-;; RVM
-(add-to-list 'load-path (concat dotfiles-dir "vendor/rvm"))
-(require 'rvm)
-(rvm-use-default)
-
-;; Ruby
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
-(add-hook 'ruby-mode-hook 'turn-on-whitespace)
-
+(require 'hector/ruby)
 (require 'hector/cucumber)
 (require 'hector/rails)
 (require 'hector/js)
