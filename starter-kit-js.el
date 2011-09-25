@@ -2,27 +2,45 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
-(autoload 'espresso-mode "espresso" "Start espresso-mode" t)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
-(add-hook 'espresso-mode-hook 'moz-minor-mode)
-(add-hook 'espresso-mode-hook 'esk-paredit-nonlisp)
-(add-hook 'espresso-mode-hook 'run-coding-hook)
-(setq espresso-indent-level 2)
+;; NB: js-mode is part of Emacs since version 23.2 (with an alias
+;; javascript-mode). It is derived and updated from Espresso mode.
 
-;; If you prefer js2-mode, use this instead:
-;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(defvar esk-js-mode-hook nil)
+(defun run-esk-js-mode-hook ()
+  (run-hooks 'esk-js-mode-hook))
 
-(eval-after-load 'espresso
-  '(progn (define-key espresso-mode-map "{" 'paredit-open-curly)
-          (define-key espresso-mode-map "}" 'paredit-close-curly-and-newline)
-          ;; fixes problem with pretty function font-lock
-          (define-key espresso-mode-map (kbd ",") 'self-insert-command)
-          (font-lock-add-keywords
-           'espresso-mode `(("\\(function *\\)("
-                             (0 (progn (compose-region (match-beginning 1)
-                                                       (match-end 1) "ƒ")
-                                       nil)))))))
+(defmacro esk-configure-javascript (name)
+  (let ((sym (intern name))
+        (mode (intern (concat name "-mode")))
+        (hook (intern (concat name "-mode-hook")))
+        (keymap (intern (concat name "-mode-map")))
+        (indent (intern (concat name "-indent-level"))))
+    `(progn
+       (autoload ',mode ,name ,(concat "Start " name "-mode") t)
+       (add-to-list 'auto-mode-alist '("\\.js$" . ,mode))
+       (add-to-list 'auto-mode-alist '("\\.json$" . ,mode))
+       (add-hook ',hook 'moz-minor-mode)
+       (add-hook ',hook 'esk-paredit-nonlisp)
+       (add-hook ',hook 'run-coding-hook)
+       (add-hook ',hook 'run-esk-js-mode-hook)
+       (setq ,indent 2)
+
+       (eval-after-load ',sym
+         '(progn (define-key ,keymap "{" 'paredit-open-curly)
+                 (define-key ,keymap "}" 'paredit-close-curly-and-newline)
+                 (define-key ,keymap (kbd ",") 'self-insert-command))))))
+
+(defun pretty-functions ()
+  (font-lock-add-keywords
+   nil `(("\\(function *\\)("
+          (0 (progn (compose-region (match-beginning 1)
+                                    (match-end 1) "ƒ")
+                    nil))))))
+(add-hook 'esk-js-mode-hook 'pretty-functions)
+
+(if (< (string-to-number emacs-version) 23.2)
+    (esk-configure-javascript "espresso")
+  (esk-configure-javascript "js"))
 
 (provide 'starter-kit-js)
 ;;; starter-kit-js.el ends here
