@@ -1,0 +1,13 @@
+#contributor : hectoregm
+#name : Minimal html5 page
+# --
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>$1</title>
+  </head>
+  <body>
+    $0
+  </body>
+</html>
