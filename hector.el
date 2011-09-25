@@ -23,6 +23,9 @@
 (require 'hector/keyboard)
 (require 'hector/twitter)
 
+(if (eq system-type 'darwin)
+    (require 'hector/mac))
+
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 (require 'color-theme)
