@@ -15,6 +15,7 @@
                                    'rvm
                                    'find-file-in-project
                                    'magit
+                                   'color-theme
                                    'gist)
   "Libraries that should be installed by default.")
 
