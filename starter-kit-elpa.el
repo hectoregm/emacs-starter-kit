@@ -17,6 +17,7 @@
                                    'magit
                                    'color-theme
                                    'auto-complete
+                                   'yasnippet
                                    'gist)
   "Libraries that should be installed by default.")
 

@@ -1,8 +1,7 @@
 ;; Snippets
-(add-to-list 'load-path (concat dotfiles-dir "vendor/yasnippet-0.6.1c"))
 (require 'yasnippet)
 (yas/initialize)
-(yas/load-directory (concat dotfiles-dir "vendor/yasnippet-0.6.1c/snippets"))
+(yas/load-directory (concat dotfiles-dir "hector/snippets"))
 
 (defun yas/advise-indent-function (function-symbol)
   (eval `(defadvice ,function-symbol (around yas/try-expand-first activate)
