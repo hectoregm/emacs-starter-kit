@@ -24,7 +24,6 @@
 (require 'ecb)
 
 ;; Auto complete
-(add-to-list 'load-path (concat dotfiles-dir "vendor/auto-complete-1.3"))
 (require 'auto-complete-config)
 
 (ac-config-default)

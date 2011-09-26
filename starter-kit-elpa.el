@@ -16,6 +16,7 @@
                                    'find-file-in-project
                                    'magit
                                    'color-theme
+                                   'auto-complete
                                    'gist)
   "Libraries that should be installed by default.")
 
