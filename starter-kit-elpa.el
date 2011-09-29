@@ -18,6 +18,7 @@
                                    'color-theme
                                    'auto-complete
                                    'yasnippet
+                                   'textmate
                                    'gist)
   "Libraries that should be installed by default.")
 
