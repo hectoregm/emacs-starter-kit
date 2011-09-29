@@ -53,7 +53,7 @@
   (rinari-launch))
 
 ;; Misc
-(server-start)
+;;(server-start)
 
 (setq whitespace-line-column 70)
 
