@@ -23,6 +23,7 @@
 (require 'hector/coffee)
 (require 'hector/keyboard)
 (require 'hector/twitter)
+(require 'hector/textmate)
 
 (if (eq system-type 'darwin)
     (require 'hector/mac))

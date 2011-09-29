@@ -1,6 +1,7 @@
 ;; Define prefixes
 (global-set-key (kbd "C-q") nil)
 (global-set-key (kbd "M-q") nil)
+(global-set-key (kbd "M-t") nil)
 
 ;; Define basic keybindings
 (global-set-key (kbd "M-g") 'goto-line)
