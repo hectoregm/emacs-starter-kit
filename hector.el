@@ -20,6 +20,7 @@
 (require 'hector/cucumber)
 (require 'hector/rails)
 (require 'hector/js)
+(require 'hector/coffee)
 (require 'hector/keyboard)
 (require 'hector/twitter)
 
