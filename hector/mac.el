@@ -11,7 +11,7 @@
 ;;(global-set-key (kbd "M-v") 'yank)
 
 ;; Setup path for git
-(setq magit-git-executable "/usr/local/git/bin/git")
+(setq magit-git-executable "/usr/local/bin/git")
 
 ;; Fullscreen
 (global-set-key [f11] 'ns-toggle-fullscreen)
