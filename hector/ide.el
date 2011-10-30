@@ -16,11 +16,11 @@
 (yas/advise-indent-function 'ruby-indent-line)
 
 ;; Cedet
-(load "vendor/cedet/common/cedet.el")
+;;(load "vendor/cedet/common/cedet.el")
 
 ;; ECB
-(add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
-(require 'ecb)
+;;(add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
+;;(require 'ecb)
 
 ;; Auto complete
 (require 'auto-complete-config)
