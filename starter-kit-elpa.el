@@ -12,6 +12,9 @@
                                    'haml-mode
                                    'sass-mode
                                    'yaml-mode
+                                   'csharp-mode
+                                   'feature-mode
+                                   'coffee-mode
                                    'rvm
                                    'find-file-in-project
                                    'magit
