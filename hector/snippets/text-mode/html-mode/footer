@@ -1,0 +1,6 @@
+#contributor : Hector G <hectoregm@gmail.com>
+#name : <footer>...</footer>
+# --
+<footer$1>
+  $0
+</footer>

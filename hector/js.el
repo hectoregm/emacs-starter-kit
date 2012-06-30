@@ -1,8 +1,9 @@
 ;; Espresso
 (add-hook 'espresso-mode-hook 'whitespace-mode)
-(setq espresso-indent-level 2)
+(setq espresso-indent-level 4)
 
 ;; Javascript Mode
-(setq javascript-indent-level 2)
+(add-hook 'js-mode-hook 'whitespace-mode)
+(setq js-indent-level 4)
 
 (provide 'hector/js)

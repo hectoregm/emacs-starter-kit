@@ -1,0 +1,6 @@
+#contributor : Hector G <hectoregm@gmail.com>
+#name : <article>...</article>
+# --
+<article$1>
+  $0
+</article>

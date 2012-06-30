@@ -1,0 +1,6 @@
+#contributor : Hector G <hectoregm@gmail.com>
+#name : <header>...</header>
+# --
+<header$1>
+  $0
+</header>

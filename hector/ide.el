@@ -22,6 +22,10 @@
 ;;(add-to-list 'load-path (concat dotfiles-dir "vendor/ecb"))
 ;;(require 'ecb)
 
+;; Emacs Nav
+(add-to-list 'load-path (concat dotfiles-dir "vendor/emacs-nav"))
+(require 'nav)
+
 ;; Auto complete
 (require 'auto-complete-config)
 

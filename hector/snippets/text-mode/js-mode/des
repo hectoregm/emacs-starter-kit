@@ -1,0 +1,6 @@
+#contributor : hectoregm <hectoregm@gmail.com>
+#name : describe(name, function () {});
+# --
+describe("$1", function() {
+  $0
+});
