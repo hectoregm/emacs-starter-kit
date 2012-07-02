@@ -29,5 +29,6 @@
     (require 'hector/mac))
 
 ;; Activate theme
+(require 'color-theme)
 (load (concat dotfiles-dir "hector/theme.el"))
 (color-theme-ruby)
