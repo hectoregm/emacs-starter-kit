@@ -9,6 +9,8 @@
                      "/bin"))
   (setenv "PATH" path))
 
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (add-to-list 'load-path (concat dotfiles-dir "vendor"))
 
 (require 'hector/meta)

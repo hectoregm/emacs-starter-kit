@@ -2,7 +2,7 @@
 (setq mac-option-key-is-meta nil)
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
-(setq mac-option-modifier nil)
+;;(setq mac-option-modifier nil)
 
 ;; Some Mac-friendly key counterparts
 (global-set-key (kbd "M-s") 'save-buffer)
