@@ -19,6 +19,7 @@
 (require 'hector/c-lang)
 (require 'hector/csharp)
 (require 'hector/ruby)
+(require 'hector/java)
 (require 'hector/cucumber)
 (require 'hector/rails)
 (require 'hector/js)
@@ -34,3 +35,5 @@
 (require 'color-theme)
 (load (concat dotfiles-dir "hector/theme.el"))
 (color-theme-ruby)
+
+(message "bar")

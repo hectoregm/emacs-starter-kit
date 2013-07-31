@@ -88,7 +88,7 @@
   (define-key *textmate-mode-map* [(meta t)] 'peepopen-goto-file-gui))
 
 (defun peepopen-bind-ns-keys ()
-  (define-key *textmate-mode-map* (kbd "M-t") 'peepopen-goto-file-gui))
+  (define-key *textmate-mode-map* [(super t)] 'peepopen-goto-file-gui))
 
 ;;;###autoload
 (add-hook 'textmate-mode-hook 'peepopen-bind-keys)

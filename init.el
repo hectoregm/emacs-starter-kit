@@ -34,8 +34,7 @@
 (setq custom-file (concat dotfiles-dir "custom.el"))
 
 (require 'package)
-(dolist (source '(("melpa" . "http://melpa.milkbox.net/packages/")
-                  ("elpa" . "http://tromey.com/elpa/")))
+(dolist (source '(("melpa" . "http://melpa.milkbox.net/packages/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 (require 'starter-kit-elpa)
@@ -68,18 +67,13 @@
 (regen-autoloads)
 (load custom-file 'noerror)
 
+
 ;; You can keep system- or user-specific customizations here
 (setq system-specific-config (concat dotfiles-dir system-name ".el")
       user-specific-config (concat dotfiles-dir user-login-name ".el"))
 
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
-
-;; Benchmarking
- (message "My .emacs loaded in %ds"
-          (destructuring-bind (hi lo ms) (current-time)
-            (- (+ hi lo) (+ (first *emacs-load-start*) (second
-                                                        *emacs-load-start*)))))
 
 (provide 'init)
 ;;; init.el ends here

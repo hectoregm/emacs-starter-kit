@@ -14,7 +14,7 @@
 (setq magit-git-executable "/usr/local/bin/git")
 
 ;; Fullscreen
-(global-set-key [f11] 'ns-toggle-fullscreen)
+(global-set-key [f11] 'toggle-fullscreen)
 
 ;; Activate menu bar
 (menu-bar-mode)
