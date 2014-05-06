@@ -20,6 +20,7 @@
 (require 'hector/csharp)
 (require 'hector/ruby)
 (require 'hector/java)
+(require 'hector/php)
 (require 'hector/cucumber)
 (require 'hector/rails)
 (require 'hector/js)
