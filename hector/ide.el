@@ -1,6 +1,6 @@
 ;; Snippets
 (require 'yasnippet)
-(yas/initialize)
+(yas--initialize)
 (yas/load-directory (concat dotfiles-dir "hector/snippets"))
 
 (defun yas/advise-indent-function (function-symbol)
